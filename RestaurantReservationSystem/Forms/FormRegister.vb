@@ -4,7 +4,7 @@ Imports MySql.Data.MySqlClient
 Public Class FormRegister
     Private Sub FormRegister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmbRole.Items.Clear()
-        cmbRole.Items.AddRange(New String() {"staff", "guest"})
+        cmbRole.Items.AddRange(New String() {"guest", "staff", "admin"})
         cmbRole.SelectedIndex = 0
     End Sub
 

@@ -39,13 +39,15 @@ Partial Class FormManageReservations
         Me.dgvReservations = New System.Windows.Forms.DataGridView()
         Me.lblStaff = New System.Windows.Forms.Label()
         Me.cmbStaff = New System.Windows.Forms.ComboBox()
+        Me.btnApprove = New System.Windows.Forms.Button()
+        Me.btnReject = New System.Windows.Forms.Button()
         CType(Me.numPax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvReservations, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(556, 253)
+        Me.btnClose.Location = New System.Drawing.Point(604, 156)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(75, 23)
         Me.btnClose.TabIndex = 19
@@ -54,7 +56,7 @@ Partial Class FormManageReservations
         '
         'btnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(556, 224)
+        Me.btnClear.Location = New System.Drawing.Point(637, 115)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(75, 23)
         Me.btnClear.TabIndex = 18
@@ -63,7 +65,7 @@ Partial Class FormManageReservations
         '
         'btnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(556, 195)
+        Me.btnDelete.Location = New System.Drawing.Point(637, 84)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(75, 23)
         Me.btnDelete.TabIndex = 17
@@ -72,7 +74,7 @@ Partial Class FormManageReservations
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(556, 133)
+        Me.btnUpdate.Location = New System.Drawing.Point(556, 115)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
         Me.btnUpdate.TabIndex = 16
@@ -152,7 +154,7 @@ Partial Class FormManageReservations
         'lblNotes
         '
         Me.lblNotes.AutoSize = True
-        Me.lblNotes.Location = New System.Drawing.Point(37, 247)
+        Me.lblNotes.Location = New System.Drawing.Point(57, 234)
         Me.lblNotes.Name = "lblNotes"
         Me.lblNotes.Size = New System.Drawing.Size(38, 13)
         Me.lblNotes.TabIndex = 28
@@ -160,7 +162,7 @@ Partial Class FormManageReservations
         '
         'txtNotes
         '
-        Me.txtNotes.Location = New System.Drawing.Point(81, 244)
+        Me.txtNotes.Location = New System.Drawing.Point(101, 231)
         Me.txtNotes.Multiline = True
         Me.txtNotes.Name = "txtNotes"
         Me.txtNotes.Size = New System.Drawing.Size(100, 20)
@@ -170,9 +172,9 @@ Partial Class FormManageReservations
         '
         Me.dgvReservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvReservations.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.dgvReservations.Location = New System.Drawing.Point(0, 282)
+        Me.dgvReservations.Location = New System.Drawing.Point(0, 318)
         Me.dgvReservations.Name = "dgvReservations"
-        Me.dgvReservations.Size = New System.Drawing.Size(800, 168)
+        Me.dgvReservations.Size = New System.Drawing.Size(939, 286)
         Me.dgvReservations.TabIndex = 30
         '
         'lblStaff
@@ -192,11 +194,33 @@ Partial Class FormManageReservations
         Me.cmbStaff.Size = New System.Drawing.Size(121, 21)
         Me.cmbStaff.TabIndex = 32
         '
+        'btnApprove
+        '
+        Me.btnApprove.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnApprove.Location = New System.Drawing.Point(340, 84)
+        Me.btnApprove.Name = "btnApprove"
+        Me.btnApprove.Size = New System.Drawing.Size(183, 23)
+        Me.btnApprove.TabIndex = 33
+        Me.btnApprove.Text = "Approve Reservation"
+        Me.btnApprove.UseVisualStyleBackColor = False
+        '
+        'btnReject
+        '
+        Me.btnReject.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnReject.Location = New System.Drawing.Point(340, 115)
+        Me.btnReject.Name = "btnReject"
+        Me.btnReject.Size = New System.Drawing.Size(183, 23)
+        Me.btnReject.TabIndex = 34
+        Me.btnReject.Text = "Reject Reservation"
+        Me.btnReject.UseVisualStyleBackColor = False
+        '
         'FormManageReservations
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(939, 604)
+        Me.Controls.Add(Me.btnReject)
+        Me.Controls.Add(Me.btnApprove)
         Me.Controls.Add(Me.cmbStaff)
         Me.Controls.Add(Me.lblStaff)
         Me.Controls.Add(Me.dgvReservations)
@@ -240,4 +264,6 @@ Partial Class FormManageReservations
     Friend WithEvents dgvReservations As DataGridView
     Friend WithEvents lblStaff As Label
     Friend WithEvents cmbStaff As ComboBox
+    Friend WithEvents btnApprove As Button
+    Friend WithEvents btnReject As Button
 End Class

@@ -171,4 +171,21 @@ Public Class FormManageReservations
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Close()
     End Sub
+
+    Private Sub btnReject_Click(sender As Object, e As EventArgs) Handles btnReject.Click
+        If selectedResId = -1 Then
+            MessageBox.Show("Select a reservation first.") : Exit Sub
+        End If
+
+        Using conn = DatabaseConnection.GetConnection()
+            conn.Open()
+            Dim cmd As New MySqlCommand("UPDATE reservations SET status='cancelled' WHERE reservation_id=@id", conn)
+            cmd.Parameters.AddWithValue("@id", selectedResId)
+            cmd.ExecuteNonQuery()
+        End Using
+
+        LoadReservations()
+        MessageBox.Show("Reservation rejected (cancelled).")
+    End Sub
+
 End Class

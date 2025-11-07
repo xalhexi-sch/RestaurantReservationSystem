@@ -95,7 +95,7 @@ Partial Class FormRegister
         'cmbRole
         '
         Me.cmbRole.FormattingEnabled = True
-        Me.cmbRole.Items.AddRange(New Object() {"admin", "staff", "guest"})
+        Me.cmbRole.Items.AddRange(New Object() {"guest", "staff", "admin"})
         Me.cmbRole.Location = New System.Drawing.Point(214, 166)
         Me.cmbRole.Name = "cmbRole"
         Me.cmbRole.Size = New System.Drawing.Size(100, 21)
