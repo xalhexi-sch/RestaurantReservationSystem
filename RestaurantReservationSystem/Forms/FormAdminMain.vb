@@ -65,7 +65,7 @@ Public Class FormAdminMain
         LoadDashboardData()
     End Sub
 
-    Private Sub btnLogout_Click(sender As Object, e As EventArgs)
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         Me.Close()
         FormLogin.Show()
     End Sub

@@ -33,6 +33,10 @@ Partial Class FormAdminMain
         Me.btnManageUsers = New System.Windows.Forms.Button()
         Me.btnRefresh = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lblWelcome
@@ -47,38 +51,38 @@ Partial Class FormAdminMain
         'lblTotalCustomers
         '
         Me.lblTotalCustomers.AutoSize = True
-        Me.lblTotalCustomers.Location = New System.Drawing.Point(230, 152)
+        Me.lblTotalCustomers.Location = New System.Drawing.Point(290, 181)
         Me.lblTotalCustomers.Name = "lblTotalCustomers"
-        Me.lblTotalCustomers.Size = New System.Drawing.Size(83, 13)
+        Me.lblTotalCustomers.Size = New System.Drawing.Size(13, 13)
         Me.lblTotalCustomers.TabIndex = 1
-        Me.lblTotalCustomers.Text = "Total Customers"
+        Me.lblTotalCustomers.Text = "0"
         '
         'lblTotalReservations
         '
         Me.lblTotalReservations.AutoSize = True
-        Me.lblTotalReservations.Location = New System.Drawing.Point(230, 174)
+        Me.lblTotalReservations.Location = New System.Drawing.Point(290, 152)
         Me.lblTotalReservations.Name = "lblTotalReservations"
-        Me.lblTotalReservations.Size = New System.Drawing.Size(96, 13)
+        Me.lblTotalReservations.Size = New System.Drawing.Size(13, 13)
         Me.lblTotalReservations.TabIndex = 2
-        Me.lblTotalReservations.Text = "Total Reservations"
+        Me.lblTotalReservations.Text = "0"
         '
         'lblAvailableTables
         '
         Me.lblAvailableTables.AutoSize = True
-        Me.lblAvailableTables.Location = New System.Drawing.Point(230, 200)
+        Me.lblAvailableTables.Location = New System.Drawing.Point(290, 230)
         Me.lblAvailableTables.Name = "lblAvailableTables"
-        Me.lblAvailableTables.Size = New System.Drawing.Size(85, 13)
+        Me.lblAvailableTables.Size = New System.Drawing.Size(13, 13)
         Me.lblAvailableTables.TabIndex = 4
-        Me.lblAvailableTables.Text = "Available Tables"
+        Me.lblAvailableTables.Text = "0"
         '
         'lblOccupiedTables
         '
         Me.lblOccupiedTables.AutoSize = True
-        Me.lblOccupiedTables.Location = New System.Drawing.Point(230, 224)
+        Me.lblOccupiedTables.Location = New System.Drawing.Point(290, 206)
         Me.lblOccupiedTables.Name = "lblOccupiedTables"
-        Me.lblOccupiedTables.Size = New System.Drawing.Size(88, 13)
+        Me.lblOccupiedTables.Size = New System.Drawing.Size(13, 13)
         Me.lblOccupiedTables.TabIndex = 5
-        Me.lblOccupiedTables.Text = "Occupied Tables"
+        Me.lblOccupiedTables.Text = "0"
         '
         'btnManageReservations
         '
@@ -134,11 +138,51 @@ Partial Class FormAdminMain
         Me.btnLogout.Text = "Logout"
         Me.btnLogout.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(188, 152)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(99, 13)
+        Me.Label1.TabIndex = 12
+        Me.Label1.Text = "Total Reservations:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(201, 181)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(86, 13)
+        Me.Label2.TabIndex = 13
+        Me.Label2.Text = "Total Customers:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(196, 205)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(91, 13)
+        Me.Label3.TabIndex = 14
+        Me.Label3.Text = "Occupied Tables:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(199, 229)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(88, 13)
+        Me.Label4.TabIndex = 15
+        Me.Label4.Text = "Available Tables:"
+        '
         'FormAdminMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.btnRefresh)
         Me.Controls.Add(Me.btnManageUsers)
@@ -168,4 +212,8 @@ Partial Class FormAdminMain
     Friend WithEvents btnManageUsers As Button
     Friend WithEvents btnRefresh As Button
     Friend WithEvents btnLogout As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class
