@@ -209,7 +209,6 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="RestaurantReservationSystem_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
